@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+
 namespace WangPluginPkm.GUI
 {
     partial class DexBuildForm
@@ -209,6 +210,16 @@ namespace WangPluginPkm.GUI
             LegalAll_BTN.UseVisualStyleBackColor = true;
             LegalAll_BTN.Click += LegalAll_BTN_Click;
             // 
+            // GenDex_BTN
+            // 
+            GenDex_BTN.Location = new System.Drawing.Point(240, 116);
+            GenDex_BTN.Name = "GenDex_BTN";
+            GenDex_BTN.Size = new System.Drawing.Size(100, 26);
+            GenDex_BTN.TabIndex = 104;
+            GenDex_BTN.Text = "合法配信箱子";
+            GenDex_BTN.UseVisualStyleBackColor = true;
+            GenDex_BTN.Click += LegalWithMet_BTN_Click;                    
+            // 
             // RandomPID_BTN
             // 
             RandomPID_BTN.Font = new System.Drawing.Font("黑体", 9F);
@@ -219,6 +230,7 @@ namespace WangPluginPkm.GUI
             RandomPID_BTN.Text = "随机PID";
             RandomPID_BTN.UseVisualStyleBackColor = true;
             RandomPID_BTN.Click += RandomPID_BTN_Click;
+            
             // 
             // Sort_BTN
             // 
@@ -343,16 +355,16 @@ namespace WangPluginPkm.GUI
             DexBuilder.Size = new System.Drawing.Size(348, 154);
             DexBuilder.TabIndex = 1;
             DexBuilder.Text = "图鉴制作器";
-            // 
-            // GenDex_BTN
-            // 
-            GenDex_BTN.Location = new System.Drawing.Point(240, 116);
-            GenDex_BTN.Name = "GenDex_BTN";
-            GenDex_BTN.Size = new System.Drawing.Size(102, 26);
-            GenDex_BTN.TabIndex = 75;
-            GenDex_BTN.Text = "生成逼真图鉴";
-            GenDex_BTN.UseVisualStyleBackColor = true;
-            GenDex_BTN.Click += GenDex_BTN_Click;
+            // // 
+            // // GenDex_BTN
+            // // 
+            // GenDex_BTN.Location = new System.Drawing.Point(240, 116);
+            // GenDex_BTN.Name = "GenDex_BTN";
+            // GenDex_BTN.Size = new System.Drawing.Size(102, 26);
+            // GenDex_BTN.TabIndex = 75;
+            // GenDex_BTN.Text = "生成逼真图鉴";
+            // GenDex_BTN.UseVisualStyleBackColor = true;
+            // GenDex_BTN.Click += GenDex_BTN_Click;
             // 
             // Insertion_BTN
             // 

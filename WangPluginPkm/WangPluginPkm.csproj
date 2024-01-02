@@ -47,6 +47,9 @@
     <Reference Include="PKHeX.Core.Enhancements">
       <HintPath>deps\PKHeX.Core.Enhancements.dll</HintPath>
     </Reference>
+    <Reference Include="H2Core">
+      <HintPath>deps\H2Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">

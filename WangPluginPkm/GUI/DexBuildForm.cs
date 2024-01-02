@@ -13,6 +13,7 @@ using WangPluginPkm.PluginUtil.MeerkatBase;
 using WangPluginPkm.SortBase;
 using static WangPluginPkm.PluginUtil.Functions.DexBuildFunctions;
 using static WangPluginPkm.PluginUtil.PluginEnums.GUIEnums;
+using H2Core;
 
 namespace WangPluginPkm.GUI
 {
@@ -262,7 +263,7 @@ namespace WangPluginPkm.GUI
             sw.Start();
             UnionPKM(SAV);
             sw.Stop();
-            MessageBox.Show($"搞定啦！用时：{sw.ElapsedMilliseconds}毫秒", "SuperWang");
+            MessageBox.Show($"搞定啦！用时：{sw.ElapsedMilliseconds}毫秒", "DavidWang");
             sw.Reset();
         }
         private void LivingDex_BTN_Click(object sender, EventArgs e)
@@ -270,9 +271,28 @@ namespace WangPluginPkm.GUI
             sw.Start();
             LivingDex(SAV);
             sw.Stop();
-            MessageBox.Show($"搞定啦！用时：{sw.ElapsedMilliseconds}毫秒", "SuperWang");
+            MessageBox.Show($"搞定啦！用时：{sw.ElapsedMilliseconds}毫秒", "DavidWang");
             sw.Reset();
         }
+    
+        private void LegalWithMet_BTN_Click(object sender, EventArgs e)
+        {
+            DexBuildFunctions.LegalWithMetBox(SAV);
+            SAV.ReloadSlots();
+            MessageBox.Show("搞定啦!本次操作保留了相遇时间！");
+        }
+
+        private void LegalWithMetAll_BTN_Click(object sender, EventArgs e)
+        {
+            sw.Start();
+            DexBuildFunctions.LegalWithMetAll(SAV);
+            SAV.ReloadSlots();
+            sw.Stop();
+            MessageBox.Show($"搞定啦！用时：{sw.ElapsedMilliseconds}毫秒!本次操作保留了相遇时间！", "DavidWang");
+            sw.Reset();
+        }
+
+
         private void Legal_BTN_Click(object sender, EventArgs e)
         {
             LegalBox(SAV);
@@ -285,7 +305,7 @@ namespace WangPluginPkm.GUI
             LegalAll(SAV);
             SAV.ReloadSlots();
             sw.Stop();
-            MessageBox.Show($"搞定啦！用时：{sw.ElapsedMilliseconds}毫秒", "SuperWang");
+            MessageBox.Show($"搞定啦！用时：{sw.ElapsedMilliseconds}毫秒", "DavidWang");
             sw.Reset();
         }
         private void ClearAll_BTN_Click(object sender, EventArgs e)
@@ -413,7 +433,7 @@ namespace WangPluginPkm.GUI
                         break;
                     }
             }
-            MessageBox.Show("排序完成", "SuperWang");
+            MessageBox.Show("排序完成", "DavidWang");
         }
         private void DeleteBox_BTN_Click(object sender, EventArgs e)
         {
@@ -687,7 +707,7 @@ namespace WangPluginPkm.GUI
                                 sw.Start();
                                 LivingDexHome(SAV);
                                 sw.Stop();
-                                MessageBox.Show($"搞定啦！用时：{sw.ElapsedMilliseconds}毫秒", "SuperWang");
+                                MessageBox.Show($"搞定啦！用时：{sw.ElapsedMilliseconds}毫秒", "DavidWang");
                                 sw.Reset();
                             }
                             else
@@ -719,7 +739,7 @@ namespace WangPluginPkm.GUI
                                 }
                                 SAV.ReloadSlots();
                                 sw.Stop();
-                                MessageBox.Show($"搞定啦！用时：{sw.ElapsedMilliseconds}毫秒", "SuperWang");
+                                MessageBox.Show($"搞定啦！用时：{sw.ElapsedMilliseconds}毫秒", "DavidWang");
                                 sw.Reset();
                             }
                             else
@@ -751,7 +771,7 @@ namespace WangPluginPkm.GUI
                                 }
                                 SAV.ReloadSlots();
                                 sw.Stop();
-                                MessageBox.Show($"搞定啦！用时：{sw.ElapsedMilliseconds}毫秒", "SuperWang");
+                                MessageBox.Show($"搞定啦！用时：{sw.ElapsedMilliseconds}毫秒", "DavidWang");
                                 sw.Reset();
                             }
                             else
@@ -783,7 +803,7 @@ namespace WangPluginPkm.GUI
                                 }
                                 SAV.ReloadSlots();
                                 sw.Stop();
-                                MessageBox.Show($"搞定啦！用时：{sw.ElapsedMilliseconds}毫秒", "SuperWang");
+                                MessageBox.Show($"搞定啦！用时：{sw.ElapsedMilliseconds}毫秒", "DavidWang");
                                 sw.Reset();
                             }
                             else
@@ -797,7 +817,7 @@ namespace WangPluginPkm.GUI
                                 sw.Start();
                                 LivingDexHome(SAV);
                                 sw.Stop();
-                                MessageBox.Show($"搞定啦！用时：{sw.ElapsedMilliseconds}毫秒", "SuperWang");
+                                MessageBox.Show($"搞定啦！用时：{sw.ElapsedMilliseconds}毫秒", "DavidWang");
                                 sw.Reset();
                             }
                             else
@@ -811,7 +831,7 @@ namespace WangPluginPkm.GUI
                                 sw.Start();
                                 LivingDexHome(SAV);
                                 sw.Stop();
-                                MessageBox.Show($"搞定啦！用时：{sw.ElapsedMilliseconds}毫秒", "SuperWang");
+                                MessageBox.Show($"搞定啦！用时：{sw.ElapsedMilliseconds}毫秒", "DavidWang");
                                 sw.Reset();
                             }
                             else
@@ -1040,7 +1060,7 @@ namespace WangPluginPkm.GUI
             }
             SAV.ReloadSlots();
             sw.Stop();
-            MessageBox.Show($"搞定啦！用时：{sw.ElapsedMilliseconds}毫秒", "SuperWang");
+            MessageBox.Show($"搞定啦！用时：{sw.ElapsedMilliseconds}毫秒", "DavidWang");
             sw.Reset();
             Player.Stream = Properties.Resources.dex;
             Player.Play();
