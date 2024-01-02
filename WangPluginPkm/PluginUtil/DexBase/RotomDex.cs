@@ -101,7 +101,7 @@ namespace WangPluginPkm.PluginUtil.DexBase
                     {
                         for (int i = 0; i < 6; i++)
                         {
-                            pk = SearchDatabase.SearchPKM(SAV, Editor, (ushort)Species.Rotom, 50);
+                            pk = SearchDatabase.SearchPKM(SAV, Editor, (ushort)Species.Rotom, 50, 0, true);
                             pk.Form = (byte)i;
                             if (pk.Form != 0)
                             {

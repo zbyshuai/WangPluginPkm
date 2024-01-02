@@ -261,6 +261,7 @@ namespace WangPluginPkm
                 L.Add(Squawkabilly);
                 L.Add(Tatsugiri);
                 L.Add(Paradox);
+                L.Add(Alcremie);
             }
             return L;
         }
